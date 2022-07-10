@@ -23,11 +23,7 @@ public class SingleNumber {
                 set.add(num);
             }
         }
-        int singleNumber = 0;
-        for (Integer i : set) {
-            singleNumber = i;
-        }
-
-        return singleNumber;
+        Iterator<Integer> iterator = set.iterator();
+        return iterator.next();
     }
 }
