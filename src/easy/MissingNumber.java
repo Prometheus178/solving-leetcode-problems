@@ -6,8 +6,7 @@ package easy;
 public class MissingNumber {
 
     public static void main(String[] args) {
-       // System.out.println(solve(new int[]{0, 1, 3}));
-        System.out.println(solveByBitManipulation(new int[]{0, 1, 3}));
+        System.out.println(solve(new int[]{0, 1, 3}));
     }
 
     /**
