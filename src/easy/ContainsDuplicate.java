@@ -13,6 +13,13 @@ public class ContainsDuplicate {
         System.out.println(solve(arr));
     }
 
+    /**
+     * time complexity = O(n)
+     * memory complexity = O(n)
+     *
+     * @param nums
+     * @return
+     */
     private static boolean solve(int[] nums){
         if (nums.length < 2) {
             return false;

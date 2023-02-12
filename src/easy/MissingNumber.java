@@ -6,9 +6,16 @@ package easy;
 public class MissingNumber {
 
     public static void main(String[] args) {
-        System.out.println(solve(new int[]{0, 1}));
+       // System.out.println(solve(new int[]{0, 1, 3}));
+        System.out.println(solveByBitManipulation(new int[]{0, 1, 3}));
     }
 
+    /**
+     * time complexity = O(n)
+     * memory complexity = O(1)
+     * @param nums
+     * @return
+     */
     private static int solve(int[] nums) {
         if (nums.length == 0) {
             return 0;
