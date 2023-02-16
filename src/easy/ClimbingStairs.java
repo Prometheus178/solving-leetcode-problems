@@ -1,6 +1,8 @@
 package easy;
 
 /**
+ * Time complexity O(n)
+ * Memory complexity O(1)
  * Author: Sergey.
  */
 public class ClimbingStairs {
