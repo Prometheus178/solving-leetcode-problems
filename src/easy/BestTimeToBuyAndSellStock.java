@@ -1,18 +1,14 @@
 package easy;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
+ * Time complexity O(n)
+ * Space complexity O(1)
  * Author: Sergey.
  */
 public class BestTimeToBuyAndSellStock {
 
     public static void main(String[] args) {
-//        int range = solve(new int[]{7, 1, 5, 3, 6, 4});
-//        int range = solve(new int[]{1, 4, 2});
         int range = solve(new int[]{3,2,6,5,0,5});
-
         System.out.println(range);
     }
 
