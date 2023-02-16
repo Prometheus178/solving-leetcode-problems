@@ -1,8 +1,8 @@
 package easy;
 
-import java.util.*;
-
 /**
+ * Time complexity O(n)
+ * Space complexity O(1)
  * Author: Sergey.
  */
 public class SingleNumber {
@@ -12,18 +12,10 @@ public class SingleNumber {
     }
 
     public static int solve(int[] nums) {
-        if (nums.length == 1) {
-            return nums[0];
-        }
-        Set<Integer> set = new HashSet<>();
+        int result = 0;
         for (int num : nums) {
-            if (set.contains(num)) {
-                set.remove(num);
-            } else {
-                set.add(num);
-            }
+            result = result ^ num;
         }
-        Iterator<Integer> iterator = set.iterator();
-        return iterator.next();
+        return result;
     }
 }
