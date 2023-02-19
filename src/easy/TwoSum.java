@@ -44,7 +44,7 @@ public class TwoSum {
 
     /**
      * Time complexity O(N^2)
-     * Space complexity -
+     * Space complexity O(1)
      * @param nums
      * @param target
      * @return
