@@ -18,6 +18,8 @@ public class MergeIntervals {
     }
 
     private static int[][] solve(int[][] intervals) {
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+
         List<int[]> merged = new ArrayList<>();
 
         for (int i = 0; i < intervals.length; i++) {
