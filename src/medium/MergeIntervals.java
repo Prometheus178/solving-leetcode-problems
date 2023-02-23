@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Time complexity O(n)
+ * Time complexity O(n * Log n )
  * Space complexity O(n)
  * Author: Sergey.
  */
