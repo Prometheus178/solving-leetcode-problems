@@ -2,7 +2,6 @@ package medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -28,25 +27,34 @@ public class IntervalListIntersections {
     }
 
     private static int[][] solve(int[][] firstList, int[][] secondList) {
-        List<int[]> merged = new ArrayList<>();
-        List<int[]> oneList = new ArrayList<>(firstList.length + firstList.length);
-        oneList.addAll(Arrays.asList(firstList));
-        oneList.addAll(Arrays.asList(secondList));
-        oneList.sort(Comparator.comparingInt(a -> a[0]));
+        List<int[]> result = new ArrayList<>();
 
-        for (int i = 0; i < oneList.size(); i++) {
-            int[] ints = oneList.get(i);
-            int start = ints[0];
-            int end = ints[1];
+        int n1 = firstList.length;
+        int n2 = secondList.length;
 
-            if (i > 0 && start <= oneList.get(i - 1)[1]) {
-                int[] intersection = new int[2];
-                intersection[0] = start;
-                intersection[1] = Math.min(oneList.get(i - 1)[1], end);
-                merged.add(intersection);
+        int i = 0;
+        int j = 0;
+
+        while (i < n1 && j < n2) {
+            int firstStart = firstList[i][0];
+            int firstEnd = firstList[i][1];
+            int secondStart = secondList[j][0];
+            int secondEnd = secondList[j][1];
+
+
+            if (firstStart <= secondStart && secondStart <= firstEnd
+                    || secondStart <= firstStart && firstStart <= secondEnd) {
+                int start = Math.max(firstStart, secondStart);
+                int end = Math.min(firstEnd, secondEnd);
+                int[] intersection = {start, end};
+                result.add(intersection);
+            }
+            if (secondEnd > firstEnd){
+                i++;
+            }else {
+                j++;
             }
         }
-        return merged.toArray(new int[merged.size()][]);
+        return result.toArray(new int[result.size()][]);
+        }
     }
-
-}
