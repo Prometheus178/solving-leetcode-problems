@@ -18,6 +18,12 @@ public class IntervalListIntersections {
         int[][] res = solve(list1, list2);
         Arrays.stream(res)
                 .forEach(a -> System.out.println(Arrays.toString(a)));
+        System.out.println("-----");
+        int[][] list3 = new int[][]{{5, 10}};
+        int[][] list4 = new int[][]{{5, 6}};
+        int[][] res1 = solve(list3, list4);
+        Arrays.stream(res1)
+                .forEach(a -> System.out.println(Arrays.toString(a)));
 
     }
 
@@ -31,11 +37,12 @@ public class IntervalListIntersections {
         for (int i = 0; i < oneList.size(); i++) {
             int[] ints = oneList.get(i);
             int start = ints[0];
+            int end = ints[1];
 
             if (i > 0 && start <= oneList.get(i - 1)[1]) {
                 int[] intersection = new int[2];
                 intersection[0] = start;
-                intersection[1] = oneList.get(i - 1)[1];
+                intersection[1] = Math.min(oneList.get(i - 1)[1], end);
                 merged.add(intersection);
             }
         }
