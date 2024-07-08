@@ -1,4 +1,4 @@
-package easy;
+package easy.dynamic.programming;
 
 /**
  * Time complexity O(n)

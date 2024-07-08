@@ -1,4 +1,4 @@
-package easy;
+package easy.prefix.sums;
 
 import java.util.ArrayList;
 import java.util.List;
