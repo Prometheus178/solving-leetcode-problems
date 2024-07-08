@@ -4,10 +4,17 @@ re-solve
 268. Missing number
 448. Find all numbers Disappeared in an array
 136. Single number
+
+dp {
 70. Climbing stairs
 121. Best time to buy and sell stock
+
+}
+
 303. Range sum query
 21. Merge two sorted lists
+
+need to solve  
 
 2 pointers
 
